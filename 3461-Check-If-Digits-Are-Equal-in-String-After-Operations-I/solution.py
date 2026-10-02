@@ -5,6 +5,6 @@ class Solution:
             for i in range(1,len(s)):
                 sum1 += int(s[i]) + int(s[i - 1])
             s = str(sum1)
-        return s
+        return len(s) == 2 
         
         
