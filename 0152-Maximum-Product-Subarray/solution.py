@@ -12,9 +12,7 @@ class Solution:
             cur_max = max(nums[i], max1 * nums[i], min1 * nums[i])
             cur_min = min(nums[i], max1 * nums[i], min1 * nums[i])
 
-            memo[i] = dp(i + 1, cur_max, cur_min)
+            memo[i] = max(cur_max, dp(i + 1, cur_max, cur_min))
             return memo[i]
 
         return dp(1, nums[0], nums[0])
-
-            
